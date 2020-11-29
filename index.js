@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const http = require('http');
 const server = http.createServer(app)
-const port = 8888
+const port = process.env.PORT || 8888
 const socketio = require('socket.io')
 
 const io = socketio(server, {
